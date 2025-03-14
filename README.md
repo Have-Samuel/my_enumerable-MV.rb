@@ -38,8 +38,8 @@ Verify your solution:
 
 # Create our list
 
-irb> list = MyList.new(1, 2, 3, 4)
-=> #<MyList: @list=[1, 2, 3, 4]>
+- irb> list = MyList.new(1, 2, 3, 4)
+- => #<MyList: @list=[1, 2, 3, 4]>
 
 # Test #all?
 
