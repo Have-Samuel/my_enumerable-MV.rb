@@ -19,6 +19,15 @@ class MyList
   end
 end
 
+p(MyList.new(1, 2, 3, 4, 5).all? { |e| e < 5 })
+# => false
+p(MyList.new(1, 2, 3, 4, 5).any? { |e| e > 5 })
+# => false
+p(MyList.new(1, 2, 3, 4, 5).filter { |e| e < 6 })
+# => [1, 2, 3, 4, 5]
+p(MyList.new(1, 2, 3, 4, 5).filter { |e| e == 6 })
+# => []
+
 # Test Cases
 list = MyList.new(1, 2, 3, 4, 5)
 puts(list.all? { |e| e < 5 })
