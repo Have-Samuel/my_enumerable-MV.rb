@@ -1,3 +1,4 @@
+require_relative 'my_enumerable'
 # Create a class MyList that has an instance variable @list.
 class MyList
   def initialize(*list)
@@ -16,3 +17,16 @@ class MyList
     end
   end
 end
+
+# Test Cases
+list = MyList.new(1, 2, 3, 4, 5)
+puts(list.all? { |e| e < 5 })
+# => false
+puts(list.all? { |e| e > 5 })
+# => false
+puts(list.all? { |e| e < 6 })
+# => true
+puts(list.any? { |e| e == 6 })
+# => false
+puts(list.any? { |e| e == 5 })
+# => true
