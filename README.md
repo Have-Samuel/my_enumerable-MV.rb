@@ -43,9 +43,9 @@ Verify your solution:
 
 # Test #all?
 
-irb> list.all? {|e| e < 5}
+- irb> list.all? {|e| e < 5}
 => true
-irb> list.all? {|e| e > 5}
+- irb> list.all? {|e| e > 5}
 => false
 
 # Test #any?
