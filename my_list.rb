@@ -1,4 +1,5 @@
-require_relative 'my_enumerable'
+require_relative "my_enumerable"
+
 # Create a class MyList that has an instance variable @list.
 class MyList
   def initialize(*list)
