@@ -50,14 +50,14 @@ irb> list.all? {|e| e > 5}
 
 # Test #any?
 
-irb> list.any? {|e| e == 2}
+- irb> list.any? {|e| e == 2}
 => true
-irb> list.any? {|e| e == 5}
+- irb> list.any? {|e| e == 5}
 => false
 
 # Test #filter
 
-irb> list.filter {|e| e.even?}
+- irb> list.filter {|e| e.even?}
 => [2, 4]
 
 ## Additional requirements
