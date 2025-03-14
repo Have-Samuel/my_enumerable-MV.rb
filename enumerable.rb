@@ -1,18 +1,3 @@
-# Create a class MyList that has an instance variable @list.
-class MyList
-  @list = []
-
-  # In MyList implement a method #each that yields successive members of @list
-
-  def each
-    @list.each { |i| yield i }
-  end
-
-  # and uses the MyEnumerable module.
-  include MyEnumerable
-
-end
-
 # Create a module MyEnumerable that implements the following methods (they should have the same funcionality as methods in Enumerable):
 # -#all?
 # -#any?
@@ -30,4 +15,31 @@ module MyEnumerable
     @list.select { |i| yeild i }
   end
 end
- 
+
+# OPTIONALLy
+module MyEnumerable
+  # Implement a method #all? that returns true if the block never returns false or nil
+  def all1?
+    check_arr = true
+    each do |n|
+      check_arr = false unless yield n
+    end
+    check_arr
+  end
+
+  def any1?
+    # Implement a method #any? that returns true if the block ever returns a value other than false or nil
+    if_any = false
+    each do |n|
+      if_any = true if yield n
+    end
+    if_any
+  end
+
+  def filter1
+    # Implement a method #filter that returns an array of elements for which the block returns true
+    filtered_arr = []
+    each { |n| filtered_arr << n if yield n }
+    filtered_arr
+  end
+end
